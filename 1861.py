@@ -32,6 +32,7 @@ class Solution:
                     left -= 1
                     right = left
 
+        # Rotating a matrix == Transposing entire matrix and then reversing each row
         transposed_box = [[None for _ in range(ROWS)] for _ in range(COLS)]
         for i in range(ROWS):
             for j in range(COLS):
