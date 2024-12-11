@@ -14,19 +14,19 @@ class Solution:
         # Sort by the start times of each interval
         intervals.sort(key=lambda x: (x[0], x[1]))
 
-        ans = 0
+        result = 0
         prevEnd = intervals[0][-1]
         for start, end in intervals[1:]:
             if start >= prevEnd:
                 prevEnd = end
             else:
-                ans += 1
+                result += 1
                 # We want to make the prevEnd variable equal to the interval
                 # with the ealier end because it is less likely for an overlap
                 # given that the input list has been sorted
                 prevEnd = min(end, prevEnd)
 
-        return ans
+        return result
 
 
 if __name__ == "__main__":
