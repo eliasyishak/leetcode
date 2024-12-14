@@ -37,6 +37,7 @@ a aaaaa a
 aa aaaaa
 """
 
+
 class Solution:
     def maximumLength(self, s: str) -> int:
         # The longest possible substring we can make for a given string of a
@@ -82,5 +83,3 @@ if __name__ == "__main__":
     ans = cls.maximumLength(s=test_case)
     print("----")
     print(ans)
-
-

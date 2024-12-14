@@ -1,8 +1,9 @@
 # https://leetcode.com/problems/sliding-puzzle
-'''
+"""
 Not the most efficient code, we could have taken some shortcuts because we know that
 the grid will be limited to 2 x 3, but this works for me :)
-'''
+"""
+
 from typing import List
 
 

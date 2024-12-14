@@ -1,9 +1,10 @@
 # https://leetcode.com/problems/find-champion-ii
 from typing import List
-'''
+
+"""
 Pretty easy if you understand that the winner is the node that doesn't
 have any edges going into it (in_degrees)
-'''
+"""
 
 
 class Solution:

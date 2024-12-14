@@ -4,7 +4,6 @@ from typing import List
 
 class Solution:
     def decrypt(self, code: List[int], k: int) -> List[int]:
-
         code_length = len(code)
         result = [0 for _ in range(code_length)]
         if k == 0:

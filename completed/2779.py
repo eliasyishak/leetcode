@@ -17,7 +17,7 @@ class Solution:
         nums.sort()
         intervals = [(val - k, val + k) for val in nums]
 
-        # You don't really need the curr variable here if you used 
+        # You don't really need the curr variable here if you used
         # i and left to calculate the distance between them. This was just
         # more intuitve for me to understand by incrementing/decrementing
         # as operations were completed to show the window expanding

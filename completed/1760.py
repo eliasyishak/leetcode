@@ -7,6 +7,7 @@ and take the largest value, but that doesn't work with the first test case of [9
 The real magic is being able to understand the clever calculation to determine how
 many operations each bag would need to hit a target value
 """
+
 from typing import List
 import math
 
@@ -24,17 +25,16 @@ class Solution:
                     return False
 
             return True
-        
+
         while left < right:
             mid = (left + right) // 2
-            
+
             if is_possible(mid):
                 right = mid
             else:
                 left = mid + 1
-        
-        return left
 
+        return left
 
 
 if __name__ == "__main__":

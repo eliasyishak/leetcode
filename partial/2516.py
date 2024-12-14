@@ -12,7 +12,6 @@ class Solution:
         complete = False
 
         while left <= right:
-
             left_char = s[left]
             right_char = s[right]
 
@@ -31,7 +30,6 @@ class Solution:
             # excess of k so we need to find the side with the shortest distance
             # to next character
             else:
-
                 chars_needed = set()
                 for char, count in counts.items():
                     if count < k:
@@ -77,7 +75,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-
     test_case_1 = {"s": "aabaaaacaabc", "k": 2}
     test_case_2 = {"s": "abc", "k": 1}
     test_case_3 = {"s": "cbbac", "k": 1}

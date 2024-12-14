@@ -6,6 +6,7 @@ approach felt more intitutive at first but when you think about it more, the que
 is much better suited when you consider that you don't have to only put the value in the queue,
 you can also add the index of the item and use that index to easily compare.
 """
+
 from collections import deque
 
 

@@ -4,7 +4,6 @@ from typing import List
 
 class Solution:
     def rotate_the_box(self, box: List[List[str]]) -> List[List[str]]:
-
         ROWS = len(box)
         COLS = len(box[0])
 
@@ -12,7 +11,6 @@ class Solution:
             right = COLS - 1
             left = right - 1
             while right >= 0 and left >= 0:
-
                 right_val = box[i][right]
                 left_val = box[i][left]
 
@@ -44,7 +42,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-
     test_case_1 = [["#", ".", ".", ".", "#"]]
     test_case_2 = [["#", ".", "*", "."], ["#", "#", "*", "."]]
 

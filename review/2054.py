@@ -2,6 +2,7 @@
 """
 Didn't really understand this one
 """
+
 from typing import List
 import heapq
 

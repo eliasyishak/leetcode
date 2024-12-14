@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/special-array-ii
 from typing import List
+
 """
 Not too bad of a problem. I took the approach of finding spots in the
 nums array where we had mistakes and kept a rolling count as we iterated

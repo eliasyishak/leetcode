@@ -5,7 +5,9 @@ values we have banned. The trick here is to convert the banned list of integers 
 so that we can perform an O(1) lookup, which makes this an O(n) algorithm. If we did not convert
 to a hash set and looked up the entry in the list, it would take this algorithm to an O(n^2)
 """
+
 from typing import List
+
 
 class Solution:
     def maxCount(self, banned: List[int], n: int, maxSum: int) -> int:
