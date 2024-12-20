@@ -1,4 +1,5 @@
-from typing import Optional, List
+from typing import List, Optional
+
 from utils.binary_tree.tree_node import TreeNode
 
 
@@ -8,28 +9,28 @@ def create_binary_tree(nodes: List[Optional[int]]) -> Optional[TreeNode]:
         return None
 
     root = TreeNode(val=nodes[0])
-    queue = [root]
+    internal_queue = [root]
     i = 1
-    while queue:
-        node = queue.pop(0)
+    while internal_queue:
+        _node = internal_queue.pop(0)
 
         if i < len(nodes) and nodes[i] is not None:
-            node.left = TreeNode(val=nodes[i])
-            queue.append(node.left)
+            _node.left = TreeNode(val=nodes[i])
+            internal_queue.append(_node.left)
         i += 1
 
         if i < len(nodes) and nodes[i] is not None:
-            node.right = TreeNode(val=nodes[i])
-            queue.append(node.right)
+            _node.right = TreeNode(val=nodes[i])
+            internal_queue.append(_node.right)
         i += 1
 
     return root
 
 
 if __name__ == "__main__":
-    nodes = [1, None, 2, None, 3]
+    node_inputs = [1, None, 2, None, 3]
 
-    tree = create_binary_tree(nodes=nodes)
+    tree = create_binary_tree(nodes=node_inputs)
 
     queue = [tree]
     while queue:
