@@ -6,8 +6,9 @@ Note, won't work running from here until I setup the top level package
 """
 
 from typing import List, Optional
-from ..utils.binary_tree.tree_node import TreeNode
-from ..utils.binary_tree.create_binary_tree import create_binary_tree
+
+from utils.binary_tree.create import create_binary_tree
+from utils.binary_tree.tree_node import TreeNode
 
 
 class Solution:
