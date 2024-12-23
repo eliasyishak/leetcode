@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/max-chunks-to-make-sorted-ii/
+# https://leetcode.com/problems/max-chunks-to-make-sorted-ii
 """
 You can view this problem as a monotonic stack problem and it becomes pretty simple
 to understand. Going from left to right, every item in the stack should be increasing,
