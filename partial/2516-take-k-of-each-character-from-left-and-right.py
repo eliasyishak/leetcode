@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/take-k-of-each-character-from-left-and-right
+from typing import TypedDict
 
 
 class Solution:
@@ -74,10 +75,15 @@ class Solution:
         return turns if complete else -1
 
 
+class TestCaseType(TypedDict):
+    s: str
+    k: int
+
+
 if __name__ == "__main__":
-    test_case_1 = {"s": "aabaaaacaabc", "k": 2}
-    test_case_2 = {"s": "abc", "k": 1}
-    test_case_3 = {"s": "cbbac", "k": 1}
+    test_case_1: TestCaseType = {"s": "aabaaaacaabc", "k": 2}
+    test_case_2: TestCaseType = {"s": "abc", "k": 1}
+    test_case_3: TestCaseType = {"s": "cbbac", "k": 1}
 
     test_case = test_case_3
     cls = Solution()
