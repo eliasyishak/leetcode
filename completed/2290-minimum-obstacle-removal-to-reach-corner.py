@@ -6,8 +6,8 @@ visiting cells that don't have obstacles in the way. So if we pop from the queue
 a cell that has an obstacle, that would mean the entire queue is full of obstacles.
 """
 
-from typing import List
 from collections import deque
+from typing import List
 
 
 class Solution:
@@ -38,6 +38,7 @@ class Solution:
                     else:
                         min_obstacles[new_i][new_j] = obstacles_encountered + 1
                         queue.append((new_i, new_j, obstacles_encountered + 1))
+        return -1
 
 
 if __name__ == "__main__":
