@@ -7,7 +7,7 @@ class TreeNode:
         val: int = 0,
         left: Optional["TreeNode"] = None,
         right: Optional["TreeNode"] = None,
-        verbose=True,
+        verbose=False,
     ):
         self.val = val
         self.left = left
