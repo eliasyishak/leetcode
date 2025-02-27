@@ -9,6 +9,25 @@ to go seek out the third element in x1 + x2 == x3.
 
 We take, x1=1, x2=2 and use the seen dictionary to find where 1 + 2 = 3 is and use
 that as the second input for the recursive helper
+
+Also instead of doing this with a recursive stack, we can use a while loop that terminates
+when it doesn't find the next value; solution below
+
+class Solution:
+    def lenLongestFibSubseq(self, arr: list[int]) -> int:
+        arr_set = set(arr)
+        res = 0
+        for i in range(len(arr) - 1):
+            for j in range(i + 1, len(arr)):
+                prev, cur = arr[i], arr[j]
+                nxt = prev + cur
+                length = 2
+                while nxt in arr_set:
+                    length += 1
+                    prev, cur = cur, nxt
+                    nxt = prev + cur
+                    res = max(res, length)
+        return res
 """
 
 
