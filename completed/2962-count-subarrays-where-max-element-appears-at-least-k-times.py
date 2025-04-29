@@ -21,7 +21,6 @@ class Solution:
             # Add element at right to our window
             if nums[right] == max_value:
                 curr_count += 1
-            right += 1
 
             # Once we have k occurrences, count subarrays and then shrink window from left
             # until we have fewer than k occurrences
