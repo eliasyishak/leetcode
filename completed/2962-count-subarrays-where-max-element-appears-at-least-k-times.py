@@ -21,13 +21,12 @@ class Solution:
             # Add element at right to our window
             if nums[right] == max_value:
                 curr_count += 1
-            right += 1
 
             # Once we have k occurrences, count subarrays and then shrink window from left
             # until we have fewer than k occurrences
             while curr_count >= k:
                 # All subarrays starting at left and ending at positions right-1, right, ..., n-1 are valid
-                res += n - (right - 1)
+                res += n - right
 
                 # Shrink window from left
                 if nums[left] == max_value:
