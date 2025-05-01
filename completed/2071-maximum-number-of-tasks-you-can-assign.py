@@ -44,15 +44,19 @@ class Solution:
             # Loop through the tasks in reverse order from the mid point attempting
             # to sovle each task
             for i in range(mid - 1, -1, -1):
+                # If worker at the end of list can accomplish the task
                 if worker_pool[-1] >= tasks[i]:
                     worker_pool.pop()
+                # When a pill is required
                 else:
                     if pills_left == 0:
                         return False
+                    # Get the index
                     rep = worker_pool.bisect_left(tasks[i] - strength)
                     if rep == len(worker_pool):
                         return False
                     pills_left -= 1
+                    # Pop by the index
                     worker_pool.pop(rep)
 
             return True
