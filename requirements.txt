@@ -1,0 +1,5 @@
+ruff==0.11.8
+sortedcontainers==2.4.0
+sortedcontainers-stubs==2.4.3
+tqdm==4.67.1
+typing_extensions==4.13.2
