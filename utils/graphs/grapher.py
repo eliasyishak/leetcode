@@ -5,11 +5,7 @@ Helper to create graphs from an adjacency list
 import matplotlib.pyplot as plt
 import networkx as nx
 
-adj = {
-    0: [2],
-    1: [0],
-    2: [0],
-}
+adj: dict[int, list[int]] = {}
 
 G = nx.DiGraph()  # type: ignore
 
